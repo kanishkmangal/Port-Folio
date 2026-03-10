@@ -1,0 +1,27 @@
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3b82f6;
+  --color-secondary: #ec4899;
+  --color-background: #0f172a;
+  --color-foreground: #f8fafc;
+
+  --font-sans: "Inter", "sans-serif";
+}
+
+/* Custom Utilities */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  max-width: 1280px; /* max-w-7xl */
+}
+
+/* Base Styles */
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    @apply antialiased font-sans;
+  }
+}
