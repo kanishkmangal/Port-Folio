@@ -25,3 +25,11 @@
     @apply antialiased font-sans;
   }
 }
+
+/* ── Custom Cursor ───────────────────────────────────────────────────────── */
+/* Hide the native cursor on pointer (desktop) devices only */
+@media (hover: hover) and (pointer: fine) {
+  *, *::before, *::after {
+    cursor: none !important;
+  }
+}

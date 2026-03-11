@@ -2,6 +2,7 @@ import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
 import Skills from '@/components/sections/Skills';
 import Projects from '@/components/sections/Projects';
+import Resume from '@/components/sections/Resume';
 import Contact from '@/components/sections/Contact';
 
 // ── Static Data ──────────────────────────────────────────────────────────────
@@ -92,6 +93,7 @@ export default function Home() {
             <About />
             <Skills skills={SKILLS} />
             <Projects initialProjects={PROJECTS} />
+            <Resume />
             <Contact />
         </div>
     );

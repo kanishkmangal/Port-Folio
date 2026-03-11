@@ -5,6 +5,7 @@ import './globals.css';
 import { clsx } from 'clsx';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import CustomCursor from '@/components/CustomCursor';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,7 +21,8 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className="dark">
-            <body className={clsx(inter.className, 'bg-slate-950 text-slate-50 min-h-screen')}>
+            <body className={clsx(inter.className, 'bg-slate-950 text-slate-50 min-h-screen cursor-none-desktop')}>
+                <CustomCursor />
                 <div className="flex flex-col min-h-screen">
                     <Navbar />
 
