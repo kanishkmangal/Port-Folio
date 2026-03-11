@@ -53,33 +53,33 @@ const SKILLS: Skill[] = [
 const PROJECTS: Project[] = [
     {
         id: '1',
-        title: 'Project One',
+        title: 'Library Seat Booking Management System',
         description:
-            'A full-stack web application built with Next.js and MongoDB. Implements authentication, CRUD operations, and a modern UI.',
-        technologies: ['Next.js', 'TypeScript', 'MongoDB', 'Tailwind CSS'],
-        githubLink: 'https://github.com',
-        liveLink: 'https://example.com',
-        featured: true,
+            'A comprehensive seat booking system for libraries, enabling students to reserve seats, view availability, and manage their bookings efficiently.',
+        technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS'],
+        githubLink: 'https://github.com/kanishkmangal/Library-Seat-Booking-Management-System',
+        liveLink: 'https://library-seat-booking-management-sys.vercel.app/',
+        featured: false,
     },
     {
         id: '2',
-        title: 'Project Two',
+        title: 'SafeLynx - File Management System',
         description:
-            'A real-time chat application using WebSockets and Node.js. Supports multiple rooms and direct messaging.',
-        technologies: ['Node.js', 'Socket.io', 'React', 'Express'],
-        githubLink: 'https://github.com',
-        liveLink: 'https://example.com',
+            'Secure document management system with authentication, cloud uploads and document access control.',
+        technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS'],
+        githubLink: 'https://github.com/kanishkmangal/SafeLynx-Secure-Document-Hub',
+        liveLink: 'https://safe-lynx-secure-document-hub.vercel.app/',
         featured: true,
     },
     {
         id: '3',
-        title: 'Project Three',
+        title: 'Appliance Repair Management System',
         description:
-            'An e-commerce platform with Stripe integration, product management, and a responsive storefront.',
-        technologies: ['Next.js', 'Stripe', 'Tailwind CSS'],
-        githubLink: 'https://github.com',
-        liveLink: 'https://example.com',
-        featured: false,
+            'A comprehensive appliance repair management system that have Workflow system for repair requests, technician allocation and service tracking',
+        technologies: ['React.js', 'PHP', 'MySQL', 'Tailwind CSS'],
+        githubLink: 'https://github.com/kanishkmangal/Appliance_Repair_management_System',
+        liveLink: 'https://appliance-repair-management-system.vercel.app/',
+        featured: true,
     },
 ];
 
