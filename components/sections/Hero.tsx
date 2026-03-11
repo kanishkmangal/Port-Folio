@@ -36,7 +36,7 @@ export default function Hero() {
                     <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
                         <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-full blur-2xl opacity-20 animate-pulse"></div>
                         <Image
-                            src="/profile.jpg"
+                            src="/profile1.jpg"
                             alt="Kanishk Mangal - Full Stack Developer"
                             fill
                             className="object-cover rounded-full border-4 border-slate-800 shadow-2xl relative z-10"
