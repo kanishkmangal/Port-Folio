@@ -57,6 +57,7 @@ const SKILLS: Skill[] = [
 const PROJECTS: Project[] = [
     {
         id: '1',
+        // imageUrl:'',
         title: 'Library Seat Booking Management System',
         description:
             'A comprehensive seat booking system for libraries, enabling students to reserve seats, view availability, and manage their bookings efficiently.',
@@ -67,6 +68,7 @@ const PROJECTS: Project[] = [
     },
     {
         id: '2',
+        imageUrl:'safelynx.png',
         title: 'SafeLynx - File Management System',
         description:
             'Secure document management system with authentication, cloud uploads and document access control.',
@@ -77,6 +79,7 @@ const PROJECTS: Project[] = [
     },
     {
         id: '3',
+        imageUrl:'appliance.png',
         title: 'Appliance Repair Management System',
         description:
             'A comprehensive appliance repair management system that have Workflow system for repair requests, technician allocation and service tracking',
