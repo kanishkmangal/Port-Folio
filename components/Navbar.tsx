@@ -8,12 +8,15 @@ import { Menu, X, Linkedin, Github } from 'lucide-react';
 
 // ── Nav items ──────────────────────────────────────────────────────────────
 const navItems = [
-    { name: 'Home',     path: '#home'     },
-    { name: 'About',    path: '#about'    },
-    { name: 'Skills',   path: '#skills'   },
-    { name: 'Projects', path: '#projects' },
-    { name: 'Resume',   path: '#resume'   },
-    { name: 'Contact',  path: '#contact'  },
+    { name: 'Home',           path: '#home'           },
+    // { name: 'About',          path: '#about'          },
+    // { name: 'Skills',         path: '#skills'         },
+    { name: 'Projects',       path: '#projects'       },
+    // { name: 'Certifications', path: '#certifications' },
+    // { name: 'Achievements',   path: '#achievements'   },
+    // { name: 'Education',      path: '#education'      },
+    { name: 'Resume',         path: '#resume'         },
+    { name: 'Contact',        path: '#contact'        },
 ];
 
 // ── Social links ───────────────────────────────────────────────────────────
