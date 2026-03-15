@@ -5,17 +5,17 @@ export default function Hero() {
         <section id="home" className="container py-20 min-h-screen flex items-center">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
                 {/* Text Column */}
-                <div className="flex flex-col items-start order-2 md:order-1">
-                    <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+                <div className="flex flex-col items-center text-center md:items-start md:text-left order-2 md:order-1">
+                    <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight md:leading-[1.2] bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
                         Hello, I'm Kanishk Mangal
                     </h1>
                     <h2 className="text-2xl md:text-3xl text-slate-100 font-semibold mb-4">
                         Full Stack Developer
                     </h2>
-                    <p className="text-lg md:text-xl text-slate-400 max-w-lg mb-8 leading-relaxed">
+                    <p className="text-lg md:text-xl text-slate-400 max-w-lg mb-8 leading-relaxed mx-auto md:mx-0">
                         Specializing in building exceptional digital experiences. I create accessible, pixel-perfect, and performant web applications.
                     </p>
-                    <div className="flex gap-4">
+                    <div className="flex justify-center md:justify-start gap-4 w-full md:w-auto">
                         <a
                             href="#projects"
                             className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all transform hover:scale-105"
