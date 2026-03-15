@@ -10,10 +10,10 @@ export default function Hero() {
                         Hello, I'm Kanishk Mangal
                     </h1>
                     <h2 className="text-2xl md:text-3xl text-slate-100 font-semibold mb-4">
-                        Full Stack Developer
+                        B.Tech CSE Student
                     </h2>
                     <p className="text-lg md:text-xl text-slate-400 max-w-lg mb-8 leading-relaxed mx-auto md:mx-0">
-                        Specializing in building exceptional digital experiences. I create accessible, pixel-perfect, and performant web applications.
+                        Aspiring Full Stack Developer focused on building scalable web applications, improving system performance, and continuously learning modern technologies in cloud and DevOps.
                     </p>
                     <div className="flex justify-center md:justify-start gap-4 w-full md:w-auto">
                         <a
@@ -21,6 +21,12 @@ export default function Hero() {
                             className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all transform hover:scale-105"
                         >
                             View Projects
+                        </a>
+                        <a
+                            href="#resume"
+                            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all transform hover:scale-105"
+                        >
+                            View Resume
                         </a>
                         <a
                             href="#contact"
