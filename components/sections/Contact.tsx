@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react';
-import { Mail, Loader2, CheckCircle, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Loader2, CheckCircle, Phone, MapPin, Send, AlertCircle } from 'lucide-react';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Contact section — no backend required.
@@ -14,24 +14,40 @@ const CONTACT_LOCATION = 'India';           // ← update if needed
 export default function Contact() {
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
-    function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
         setLoading(true);
+        setError(null);
+        setSuccess(false);
 
         const data    = new FormData(event.currentTarget);
         const name    = data.get('name')    as string;
         const email   = data.get('email')   as string;
+        const subject = data.get('subject') as string;
         const message = data.get('message') as string;
 
-        const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-        const body    = encodeURIComponent(`From: ${name}\nEmail: ${email}\n\n${message}`);
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, subject, message }),
+            });
 
-        window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.error || 'Failed to send message.');
+            }
 
-        setLoading(false);
-        setSuccess(true);
-        (event.target as HTMLFormElement).reset();
+            setSuccess(true);
+            (event.target as HTMLFormElement).reset();
+        } catch (err: any) {
+            console.error('Contact form error:', err);
+            setError(err.message || 'Something went wrong. Please try again.');
+        } finally {
+            setLoading(false);
+        }
     }
 
     return (
@@ -106,7 +122,13 @@ export default function Contact() {
                     {success && (
                         <div className="mb-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg flex items-center gap-3 text-green-400">
                             <CheckCircle size={20} />
-                            <span>Your mail app is opening — thanks for reaching out!</span>
+                            <span>Message sent successfully! I'll get back to you soon.</span>
+                        </div>
+                    )}
+                    {error && (
+                        <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg flex items-center gap-3 text-red-400">
+                            <AlertCircle size={20} />
+                            <span>{error}</span>
                         </div>
                     )}
 
@@ -136,6 +158,20 @@ export default function Contact() {
                                 required
                                 className="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-100 placeholder-slate-600 transition-all"
                                 placeholder="your@email.com"
+                            />
+                        </div>
+
+                        <div>
+                            <label htmlFor="contact-subject" className="block text-sm font-medium text-slate-300 mb-2">
+                                Subject
+                            </label>
+                            <input
+                                type="text"
+                                id="contact-subject"
+                                name="subject"
+                                required
+                                className="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-100 placeholder-slate-600 transition-all"
+                                placeholder="Project Inquiry"
                             />
                         </div>
 

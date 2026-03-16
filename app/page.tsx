@@ -62,7 +62,7 @@ const PROJECTS: Project[] = [
         imageUrl: 'library.png',
         title: 'Library Seat Booking Management System',
         description:
-            'A comprehensive seat booking system for libraries, enabling students to reserve seats, view availability, and manage their bookings efficiently.',
+            'The Library Seat Booking System is a full-stack web application that allows users to reserve library seats through an interactive seat selection interface similar to a bus ticket booking system. The platform includes secure user authentication using JWT and supports monthly seat reservations with real-time seat availability indicators. An admin dashboard enables seat management, booking control, and report generation for efficient library operations. The system improves seat allocation transparency and eliminates manual reservation processes through a responsive and user-friendly interface.',
         technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS'],
         githubLink: 'https://github.com/kanishkmangal/Library-Seat-Booking-Management-System',
         liveLink: 'https://library-seat-booking-management-sys.vercel.app/',
@@ -73,7 +73,7 @@ const PROJECTS: Project[] = [
         imageUrl: 'safelynx.png',
         title: 'SafeLynx - File Management System',
         description:
-            'Secure document management system with authentication, cloud uploads and document access control.',
+            'SafeLynx is a secure full-stack document management system built using the MERN stack. The platform allows users to upload, store, manage, and share files with JWT-based authentication and role-based access control. It integrates cloud storage with real-time storage tracking to ensure efficient file management. The system provides a clean user interface for viewing and organizing documents while maintaining strong security practices. It is designed for personal, academic, and small organizational document handling.',
         technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS'],
         githubLink: 'https://github.com/kanishkmangal/SafeLynx-Secure-Document-Hub',
         liveLink: 'https://safe-lynx-secure-document-hub.vercel.app/',
@@ -84,7 +84,7 @@ const PROJECTS: Project[] = [
         imageUrl: 'appliance.png',
         title: 'Appliance Repair Management System',
         description:
-            'A comprehensive appliance repair management system that have Workflow system for repair requests, technician allocation and service tracking',
+            'The Appliance Repair Management System is a full-stack service management platform designed to streamline appliance repair workflows. It enables customers to submit repair requests, technicians to manage assigned jobs, and administrators to oversee service operations through dedicated dashboards. The system includes authentication, job allocation, status tracking, and repair history management. By automating coordination between users, technicians, and admins, the platform improves service efficiency and reduces manual management.',
         technologies: ['React.js', 'PHP', 'MySQL', 'Tailwind CSS'],
         githubLink: 'https://github.com/kanishkmangal/Appliance_Repair_management_System',
         liveLink: 'https://appliance-repair-management-system.vercel.app/',

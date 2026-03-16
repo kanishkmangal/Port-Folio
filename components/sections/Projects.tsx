@@ -66,7 +66,7 @@ export default function Projects({ initialProjects }: { initialProjects: Project
 
                         <div className="p-6 flex flex-col flex-grow">
                             <h3 className="text-xl font-bold mb-2 text-slate-100">{project.title}</h3>
-                            <p className="text-slate-400 text-sm mb-4 line-clamp-3 flex-grow">{project.description}</p>
+                            <p className="text-slate-400 text-sm mb-4 leading-relaxed flex-grow">{project.description}</p>
 
                             <div className="flex flex-wrap gap-2 mb-6">
                                 {project.technologies.slice(0, 4).map(tech => (
