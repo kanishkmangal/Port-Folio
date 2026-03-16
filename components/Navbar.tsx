@@ -8,10 +8,10 @@ import { Menu, X, Linkedin, Github } from 'lucide-react';
 
 // ── Nav items ──────────────────────────────────────────────────────────────
 const navItems = [
-    { name: 'Home',           path: '#home'           },
+    // { name: 'Home',           path: '#home'           },
     // { name: 'About',          path: '#about'          },
-    // { name: 'Skills',         path: '#skills'         },
     { name: 'Projects',       path: '#projects'       },
+    { name: 'Skills',         path: '#skills'         },
     // { name: 'Certifications', path: '#certifications' },
     // { name: 'Achievements',   path: '#achievements'   },
     // { name: 'Education',      path: '#education'      },

@@ -47,16 +47,16 @@ export default function Projects({ initialProjects }: { initialProjects: Project
             {/* Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredProjects.map(project => (
-                    <div key={project.id} className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all hover:shadow-lg group flex flex-col">
+                    <div key={project.id} className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:scale-[1.03] hover:shadow-xl group flex flex-col">
                         <div className="h-48 bg-slate-800 relative overflow-hidden shrink-0">
                             {project.imageUrl ? (
                                 <img
                                     src={project.imageUrl}
                                     alt={project.title}
-                                    className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                                 />
                             ) : (
-                                <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-700 flex items-center justify-center">
+                                <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-700 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
                                     <span className="text-slate-500 text-4xl font-bold opacity-10">
                                         {project.title[0]}
                                     </span>

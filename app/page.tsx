@@ -36,22 +36,24 @@ const SKILLS: Skill[] = [
     { id: '4',  name: 'C',       category: 'Languages' },
     { id: '5',  name: 'C++',       category: 'Languages' },
     { id: '6',  name: 'Python',      category: 'Languages' },
-    { id: '7',  name: 'HTML / CSS',  category: 'Languages' },
-    { id: '8',  name: 'PHP',         category: 'Languages' },
+    { id: '7',  name: 'HTML5',       category: 'Languages' },
+    { id: '8',name: 'CSS3',        category: 'Languages' },
+    { id: '9',  name: 'PHP',         category: 'Languages' },
     // Frameworks
-    { id: '9',  name: 'React',       category: 'Frameworks' },
-    { id: '10',  name: 'Next.js',     category: 'Frameworks' },
-    { id: '11',  name: 'Angular.js',     category: 'Frameworks' },
-    { id: '12', name: 'Node.js',     category: 'Frameworks' },
-    { id: '13', name: 'Express.js',  category: 'Frameworks' },
-    { id: '14', name: 'Tailwind CSS',category: 'Frameworks' },
+    { id: '10',  name: 'React',       category: 'Frameworks' },
+    { id: '11',  name: 'Next.js',     category: 'Frameworks' },
+    { id: '12',  name: 'Angular.js',     category: 'Frameworks' },
+    { id: '13', name: 'Node.js',     category: 'Frameworks' },
+    { id: '14', name: 'Express.js',  category: 'Frameworks' },
+    { id: '15', name: 'Tailwind CSS',category: 'Frameworks' },
     // Tools
-    { id: '15', name: 'Git & GitHub',category: 'Tools' },
-    { id: '16', name: 'PostgreSQL',  category: 'Tools' },
-    { id: '17', name: 'MongoDB',     category: 'Tools' },  
-    { id: '18', name: 'VS Code', category: 'Tools' },
-    { id: '19',  name: 'MYSQL',       category: 'Tools' },
-    { id: '20',  name: 'PostMan',       category: 'Tools' },
+    { id: '16', name: 'Git',         category: 'Tools' },
+    { id: '17',name: 'GitHub',     category: 'Tools' },
+    { id: '18', name: 'PostgreSQL',  category: 'Tools' },
+    { id: '19', name: 'MongoDB',     category: 'Tools' },  
+    { id: '20', name: 'VS Code', category: 'Tools' },
+    { id: '21',  name: 'MYSQL',       category: 'Tools' },
+    { id: '22',  name: 'PostMan',       category: 'Tools' },
 ];
 
 const PROJECTS: Project[] = [
@@ -97,8 +99,8 @@ export default function Home() {
         <div className="flex flex-col">
             <Hero />
             <About />
-            <Skills skills={SKILLS} />
             <Projects initialProjects={PROJECTS} />
+            <Skills skills={SKILLS} />
             <Certifications />
             <Achievements />
             <Education />

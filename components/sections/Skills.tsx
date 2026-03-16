@@ -19,7 +19,8 @@ const skillIconMap: Record<string, React.ReactNode> = {
     'C':            <SiC className="text-[#A8B9CC]" size={16} />,
     'C++':          <SiCplusplus className="text-[#00599C]" size={16} />,
     'Python':       <SiPython className="text-[#3776AB]" size={16} />,
-    'HTML / CSS':   <div className="flex -space-x-1"><SiHtml5 className="text-[#E34F26]" size={16} /><SiCss className="text-[#1572B6]" size={16} /></div>,
+    'HTML5':        <SiHtml5 className="text-[#E34F26]" size={16} />,
+    'CSS3':         <SiCss className="text-[#1572B6]" size={16} />,
     'PHP':          <SiPhp className="text-[#777BB4]" size={20} />,
 
     'React':        <SiReact className="text-[#61DAFB]" size={16} />,
@@ -29,7 +30,8 @@ const skillIconMap: Record<string, React.ReactNode> = {
     'Express.js':   <SiExpress className="text-slate-100" size={16} />,
     'Tailwind CSS': <SiTailwindcss className="text-[#06B6D4]" size={16} />,
 
-    'Git & GitHub': <div className="flex -space-x-1"><SiGit className="text-[#F05032]" size={16} /><SiGithub className="text-slate-100" size={16} /></div>,
+    'Git':          <SiGit className="text-[#F05032]" size={16} />,
+    'GitHub':       <SiGithub className="text-slate-100" size={16} />,
     'PostgreSQL':   <SiPostgresql className="text-[#4169E1]" size={16} />,
     'MongoDB':      <SiMongodb className="text-[#47A248]" size={16} />,
     'VS Code':      <VscVscode className="text-[#007ACC]" size={16} />,
@@ -53,16 +55,16 @@ export default function Skills({ skills }: { skills: Skill[] }) {
         borderColor: string;
         list: Skill[];
     }) => (
-        <div className={`bg-slate-900/50 p-6 rounded-2xl border border-slate-800 hover:${borderColor} transition-colors group`}>
+        <div className={`bg-slate-900/50 p-6 rounded-2xl border border-slate-800 hover:${borderColor} transition-all duration-300 hover:scale-[1.02] hover:shadow-xl group`}>
             <div className="flex items-center gap-3 mb-6">
                 <div className="group-hover:scale-110 transition-transform">{icon}</div>
                 <h3 className="text-xl font-bold text-slate-100">{title}</h3>
             </div>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-4">
                 {list.length > 0 ? list.map(skill => (
                     <span 
                         key={skill.id} 
-                        className="flex items-center gap-2 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-full text-sm border border-slate-700 hover:border-slate-500 transition-all font-medium hover:shadow-md cursor-default"
+                        className="flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 hover:scale-105 text-slate-200 rounded-xl text-sm border border-slate-700 hover:border-blue-500 transition-all duration-300 font-medium hover:shadow-md cursor-default"
                     >
                         {skillIconMap[skill.name]}
                         {skill.name}

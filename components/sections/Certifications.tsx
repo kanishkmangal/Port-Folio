@@ -9,7 +9,7 @@ const certifications = [
     },
     {
         title: 'Generative AI, Data Science, AI Foundation',
-        platform: 'Oracle Cloud Infrastructure',
+        platform: 'Oracle',
         date: 'Oct 2025',
         link: 'https://drive.google.com/drive/folders/1v7iOVbeAypJ1DgqLkeslCeIOtsX2TDNo'
     },
