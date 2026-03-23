@@ -1,44 +1,53 @@
 import Image from 'next/image';
+import { ScrollReveal, ScrollItem } from '@/components/ScrollReveal';
 
 export default function Hero() {
     return (
-        <section id="home" className="container py-20 min-h-screen flex items-center">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
+        <section id="home" className="container py-20 min-h-screen flex items-center overflow-hidden">
+            <ScrollReveal className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
                 {/* Text Column */}
                 <div className="flex flex-col items-center text-center md:items-start md:text-left order-2 md:order-1">
-                    <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight md:leading-[1.2] bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
-                        Hello, I'm Kanishk Mangal
-                    </h1>
-                    <h2 className="text-2xl md:text-3xl text-slate-100 font-semibold mb-4">
-                        B.Tech CSE Student
-                    </h2>
-                    <p className="text-lg md:text-xl text-slate-400 max-w-lg mb-8 leading-relaxed mx-auto md:mx-0">
-                        Aspiring Full Stack Developer focused on building scalable web applications, improving system performance, and continuously learning modern technologies in cloud and DevOps.
-                    </p>
-                    <div className="flex justify-center md:justify-start gap-4 w-full md:w-auto">
-                        <a
-                            href="#projects"
-                            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all transform hover:scale-105"
-                        >
-                            View Projects
-                        </a>
-                        <a
-                            href="#resume"
-                            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all transform hover:scale-105"
-                        >
-                            View Resume
-                        </a>
-                        <a
-                            href="#contact"
-                            className="px-6 py-3 border border-slate-700 hover:border-slate-500 text-slate-300 rounded-lg font-medium transition-all hover:bg-slate-800"
-                        >
-                            Contact Me
-                        </a>
-                    </div>
+                    <ScrollItem>
+                        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight md:leading-[1.2] bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+                            Hello, I'm Kanishk Mangal
+                        </h1>
+                    </ScrollItem>
+                    <ScrollItem>
+                        <h2 className="text-2xl md:text-3xl text-slate-100 font-semibold mb-4">
+                            B.Tech CSE Student
+                        </h2>
+                    </ScrollItem>
+                    <ScrollItem>
+                        <p className="text-lg md:text-xl text-slate-400 max-w-lg mb-8 leading-relaxed mx-auto md:mx-0">
+                            Aspiring Full Stack Developer focused on building scalable web applications, improving system performance, and continuously learning modern technologies in cloud and DevOps.
+                        </p>
+                    </ScrollItem>
+                    <ScrollItem>
+                        <div className="flex justify-center md:justify-start gap-4 w-full md:w-auto">
+                            <a
+                                href="#projects"
+                                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all transform hover:scale-105"
+                            >
+                                View Projects
+                            </a>
+                            <a
+                                href="#resume"
+                                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all transform hover:scale-105"
+                            >
+                                View Resume
+                            </a>
+                            <a
+                                href="#contact"
+                                className="px-6 py-3 border border-slate-700 hover:border-slate-500 text-slate-300 rounded-lg font-medium transition-all hover:bg-slate-800"
+                            >
+                                Contact Me
+                            </a>
+                        </div>
+                    </ScrollItem>
                 </div>
 
                 {/* Image Column */}
-                <div className="flex justify-center md:justify-end order-1 md:order-2">
+                <ScrollItem className="flex justify-center md:justify-end order-1 md:order-2">
                     <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
                         <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-full blur-2xl opacity-20 animate-pulse"></div>
                         <Image
@@ -49,8 +58,8 @@ export default function Hero() {
                             priority
                         />
                     </div>
-                </div>
-            </div>
+                </ScrollItem>
+            </ScrollReveal>
         </section>
     );
 }

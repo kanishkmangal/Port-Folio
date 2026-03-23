@@ -1,4 +1,5 @@
 import { Award, ExternalLink } from 'lucide-react';
+import { ScrollReveal, ScrollItem } from '@/components/ScrollReveal';
 
 const certifications = [
     {
@@ -41,27 +42,33 @@ const certifications = [
 
 export default function Certifications() {
     return (
-        <section id="certifications" className="container py-20 min-h-screen flex flex-col justify-center">
-            <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center gap-3 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
-                <Award className="text-blue-400" size={36} />
-                Certifications
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {certifications.map((cert, index) => (
-                    <div key={index} className="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl hover:border-blue-500/50 transition-all hover:shadow-lg hover:-translate-y-1 flex flex-col group">
-                        <div className="flex-grow">
-                            <h3 className="text-xl font-bold text-slate-100 mb-2 group-hover:text-blue-400 transition-colors">{cert.title}</h3>
-                            <p className="text-slate-400 text-sm mb-4">{cert.platform}</p>
-                        </div>
-                        <div className="flex items-center justify-between mt-6">
-                            <span className="text-xs font-semibold text-slate-500 bg-slate-800/50 px-3 py-1 rounded-full">{cert.date}</span>
-                            <a href={cert.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-blue-400 hover:text-blue-300 transition-colors">
-                                View <ExternalLink size={14} />
-                            </a>
-                        </div>
-                    </div>
-                ))}
-            </div>
+        <section id="certifications" className="container py-20 min-h-screen flex flex-col justify-center overflow-hidden">
+            <ScrollReveal>
+                <ScrollItem>
+                    <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center gap-3 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+                        <Award className="text-blue-400" size={36} />
+                        Certifications
+                    </h2>
+                </ScrollItem>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {certifications.map((cert, index) => (
+                        <ScrollItem key={index} className="h-full">
+                            <div className="h-full bg-slate-900/50 border border-slate-800 p-6 rounded-2xl hover:border-blue-500/50 transition-all hover:shadow-lg hover:-translate-y-1 flex flex-col group">
+                                <div className="flex-grow">
+                                    <h3 className="text-xl font-bold text-slate-100 mb-2 group-hover:text-blue-400 transition-colors">{cert.title}</h3>
+                                    <p className="text-slate-400 text-sm mb-4">{cert.platform}</p>
+                                </div>
+                                <div className="flex items-center justify-between mt-6">
+                                    <span className="text-xs font-semibold text-slate-500 bg-slate-800/50 px-3 py-1 rounded-full">{cert.date}</span>
+                                    <a href={cert.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-blue-400 hover:text-blue-300 transition-colors">
+                                        View <ExternalLink size={14} />
+                                    </a>
+                                </div>
+                            </div>
+                        </ScrollItem>
+                    ))}
+                </div>
+            </ScrollReveal>
         </section>
     );
 }

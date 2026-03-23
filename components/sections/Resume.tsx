@@ -1,4 +1,5 @@
 import { Eye, Download, FileText } from 'lucide-react';
+import { ScrollReveal, ScrollItem } from '@/components/ScrollReveal';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Place your resume at /public/resume.pdf to make the buttons work.
@@ -6,29 +7,33 @@ import { Eye, Download, FileText } from 'lucide-react';
 
 export default function Resume() {
     return (
-        <section id="resume" className="container py-20 min-h-screen flex flex-col items-center justify-center">
+        <section id="resume" className="container py-20 min-h-screen flex flex-col items-center justify-center overflow-hidden">
             {/* Card */}
-            <div className="w-full max-w-2xl bg-slate-900/50 border border-slate-800 rounded-2xl p-10 shadow-xl backdrop-blur-sm text-center">
+            <ScrollReveal className="w-full max-w-2xl bg-slate-900/50 border border-slate-800 rounded-2xl p-10 shadow-xl backdrop-blur-sm text-center">
 
                 {/* Icon */}
-                <div className="flex justify-center mb-6">
+                <ScrollItem className="flex justify-center mb-6">
                     <div className="w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center">
                         <FileText className="text-blue-400" size={34} />
                     </div>
-                </div>
+                </ScrollItem>
 
                 {/* Heading */}
-                <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
-                    My Resume
-                </h2>
+                <ScrollItem>
+                    <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+                        My Resume
+                    </h2>
+                </ScrollItem>
 
                 {/* Subtitle */}
-                <p className="text-slate-400 text-lg mb-10 max-w-md mx-auto leading-relaxed">
-                    Interested in working together? View or download my resume to learn more about my experience, skills, and projects.
-                </p>
+                <ScrollItem>
+                    <p className="text-slate-400 text-lg mb-10 max-w-md mx-auto leading-relaxed">
+                        Interested in working together? View or download my resume to learn more about my experience, skills, and projects.
+                    </p>
+                </ScrollItem>
 
                 {/* Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <ScrollItem className="flex flex-col sm:flex-row gap-4 justify-center">
 
                     {/* View Resume — opens in new tab */}
                     <a
@@ -50,13 +55,15 @@ export default function Resume() {
                         <Download size={20} />
                         Download Resume
                     </a>
-                </div>
+                </ScrollItem>
 
                 {/* Hint */}
-                <p className="text-slate-600 text-sm mt-8">
-                    PDF · Last updated March 2026
-                </p>
-            </div>
+                <ScrollItem>
+                    <p className="text-slate-600 text-sm mt-8">
+                        PDF · Last updated March 2026
+                    </p>
+                </ScrollItem>
+            </ScrollReveal>
         </section>
     );
 }

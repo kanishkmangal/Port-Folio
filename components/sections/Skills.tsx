@@ -1,5 +1,6 @@
 import { Sparkles, Code2, Layers, Wrench } from 'lucide-react';
 import { Skill } from '@/app/page';
+import { ScrollReveal, ScrollItem } from '@/components/ScrollReveal';
 
 // ── React Icons ───────────────────────────────────────────────────────────
 import { 
@@ -55,53 +56,59 @@ export default function Skills({ skills }: { skills: Skill[] }) {
         borderColor: string;
         list: Skill[];
     }) => (
-        <div className={`bg-slate-900/50 p-6 rounded-2xl border border-slate-800 hover:${borderColor} transition-all duration-300 hover:scale-[1.02] hover:shadow-xl group`}>
-            <div className="flex items-center gap-3 mb-6">
-                <div className="group-hover:scale-110 transition-transform">{icon}</div>
-                <h3 className="text-xl font-bold text-slate-100">{title}</h3>
+        <ScrollItem className="h-full">
+            <div className={`h-full bg-slate-900/50 p-6 rounded-2xl border border-slate-800 hover:${borderColor} transition-all duration-300 hover:scale-[1.02] hover:shadow-xl group`}>
+                <div className="flex items-center gap-3 mb-6">
+                    <div className="group-hover:scale-110 transition-transform">{icon}</div>
+                    <h3 className="text-xl font-bold text-slate-100">{title}</h3>
+                </div>
+                <div className="flex flex-wrap gap-4">
+                    {list.length > 0 ? list.map(skill => (
+                        <span 
+                            key={skill.id} 
+                            className="flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 hover:scale-105 text-slate-200 rounded-xl text-sm border border-slate-700 hover:border-blue-500 transition-all duration-300 font-medium hover:shadow-md cursor-default"
+                        >
+                            {skillIconMap[skill.name]}
+                            {skill.name}
+                        </span>
+                    )) : (
+                        <p className="text-slate-500 italic">Nothing here yet.</p>
+                    )}
+                </div>
             </div>
-            <div className="flex flex-wrap gap-4">
-                {list.length > 0 ? list.map(skill => (
-                    <span 
-                        key={skill.id} 
-                        className="flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 hover:scale-105 text-slate-200 rounded-xl text-sm border border-slate-700 hover:border-blue-500 transition-all duration-300 font-medium hover:shadow-md cursor-default"
-                    >
-                        {skillIconMap[skill.name]}
-                        {skill.name}
-                    </span>
-                )) : (
-                    <p className="text-slate-500 italic">Nothing here yet.</p>
-                )}
-            </div>
-        </div>
+        </ScrollItem>
     );
 
     return (
-        <section id="skills" className="container py-20 min-h-screen flex flex-col justify-center">
-            <h2 className="text-3xl font-bold mb-12 text-center text-slate-100 flex items-center justify-center gap-2">
-                <Sparkles className="text-yellow-400" /> Technical Skills
-            </h2>
+        <section id="skills" className="container py-20 min-h-screen flex flex-col justify-center overflow-hidden">
+            <ScrollReveal>
+                <ScrollItem>
+                    <h2 className="text-3xl font-bold mb-12 text-center text-slate-100 flex items-center justify-center gap-2">
+                        <Sparkles className="text-yellow-400" /> Technical Skills
+                    </h2>
+                </ScrollItem>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <Card
-                    title="Languages"
-                    icon={<Code2 className="text-blue-400" size={28} />}
-                    borderColor="border-blue-500/30"
-                    list={languages}
-                />
-                <Card
-                    title="Frameworks"
-                    icon={<Layers className="text-green-400" size={28} />}
-                    borderColor="border-green-500/30"
-                    list={frameworks}
-                />
-                <Card
-                    title="Tools"
-                    icon={<Wrench className="text-purple-400" size={28} />}
-                    borderColor="border-purple-500/30"
-                    list={tools}
-                />
-            </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <Card
+                        title="Languages"
+                        icon={<Code2 className="text-blue-400" size={28} />}
+                        borderColor="border-blue-500/30"
+                        list={languages}
+                    />
+                    <Card
+                        title="Frameworks"
+                        icon={<Layers className="text-green-400" size={28} />}
+                        borderColor="border-green-500/30"
+                        list={frameworks}
+                    />
+                    <Card
+                        title="Tools"
+                        icon={<Wrench className="text-purple-400" size={28} />}
+                        borderColor="border-purple-500/30"
+                        list={tools}
+                    />
+                </div>
+            </ScrollReveal>
         </section>
     );
 }
