@@ -2,10 +2,14 @@ import { Trophy, Star } from 'lucide-react';
 import { ScrollReveal, ScrollItem } from '@/components/ScrollReveal';
 
 const achievements = [
-    // {
-    //     title: 'Secured Global Rank 792 among 27,000+ participants in LeetCode Biweekly Contest 169',
-    //     date: 'Nov 2025',
-    // },
+    {
+        title: 'Earned 5-star badges in Java and Problem Solving on HackerRank, demonstrating strong proficiency in programming and algorithmic skills.',
+        date: 'Feb 2026',
+    },
+    {
+        title: 'Secured Global Rank 792 among 27,000+ participants in LeetCode Biweekly Contest 169',
+        date: 'Nov 2025',
+    },
     {
         title: 'Successfully completed Hacktoberfest 2025 with multiple accepted open-source pull requests',
         date: 'Oct 2025',
